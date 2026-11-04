@@ -1,0 +1,39 @@
+Alpha: 0.01, training set size: 60000, test set size: 10000, weights : <-0.1, 0.1>, hidden units: 100
+
+Iter: 0 Error: 0.804664 Train Accuracy: 27910 - 46.5167% Test Accuracy: 75.87
+Iter: 10 Error: 0.374321 Train Accuracy: 49681 - 82.8017% Test Accuracy: 89.86
+Iter: 20 Error: 0.331031 Train Accuracy: 51496 - 85.8267% Test Accuracy: 91.64
+Iter: 30 Error: 0.313169 Train Accuracy: 52296 - 87.16% Test Accuracy: 92.35
+Iter: 40 Error: 0.30355 Train Accuracy: 52784 - 87.9733% Test Accuracy: 92.78
+Iter: 50 Error: 0.296341 Train Accuracy: 53074 - 88.4567% Test Accuracy: 93.1
+Iter: 60 Error: 0.290948 Train Accuracy: 53333 - 88.8883% Test Accuracy: 93.32
+Iter: 70 Error: 0.285305 Train Accuracy: 53647 - 89.4117% Test Accuracy: 93.43
+Iter: 80 Error: 0.28146 Train Accuracy: 53712 - 89.52% Test Accuracy: 93.65
+Iter: 90 Error: 0.278191 Train Accuracy: 53971 - 89.9517% Test Accuracy: 93.63
+Iter: 100 Error: 0.275005 Train Accuracy: 54133 - 90.2217% Test Accuracy: 93.84
+Iter: 110 Error: 0.272135 Train Accuracy: 54198 - 90.33% Test Accuracy: 94.01
+Iter: 120 Error: 0.270156 Train Accuracy: 54311 - 90.5183% Test Accuracy: 94.1
+Iter: 130 Error: 0.266387 Train Accuracy: 54460 - 90.7667% Test Accuracy: 94.26
+Iter: 140 Error: 0.265381 Train Accuracy: 54495 - 90.825% Test Accuracy: 94.19
+Iter: 150 Error: 0.263027 Train Accuracy: 54512 - 90.8533% Test Accuracy: 94.18
+Iter: 160 Error: 0.262491 Train Accuracy: 54637 - 91.0617% Test Accuracy: 94.29
+Iter: 170 Error: 0.25927 Train Accuracy: 54734 - 91.2233% Test Accuracy: 94.3
+Iter: 180 Error: 0.257819 Train Accuracy: 54805 - 91.3417% Test Accuracy: 94.4
+Iter: 190 Error: 0.25729 Train Accuracy: 54913 - 91.5217% Test Accuracy: 94.51
+Iter: 200 Error: 0.255374 Train Accuracy: 54904 - 91.5067% Test Accuracy: 94.53
+Iter: 210 Error: 0.254778 Train Accuracy: 54911 - 91.5183% Test Accuracy: 94.61
+Iter: 220 Error: 0.25466 Train Accuracy: 54960 - 91.6% Test Accuracy: 94.66
+Iter: 230 Error: 0.251481 Train Accuracy: 54981 - 91.635% Test Accuracy: 94.69
+Iter: 240 Error: 0.252981 Train Accuracy: 55041 - 91.735% Test Accuracy: 94.63
+Iter: 250 Error: 0.251403 Train Accuracy: 55099 - 91.8317% Test Accuracy: 94.77
+Iter: 260 Error: 0.250036 Train Accuracy: 55143 - 91.905% Test Accuracy: 94.74
+Iter: 270 Error: 0.24909 Train Accuracy: 55260 - 92.1% Test Accuracy: 94.8
+Iter: 280 Error: 0.248943 Train Accuracy: 55198 - 91.9967% Test Accuracy: 94.81
+Iter: 290 Error: 0.246764 Train Accuracy: 55315 - 92.1917% Test Accuracy: 94.92
+Iter: 300 Error: 0.246724 Train Accuracy: 55220 - 92.0333% Test Accuracy: 94.91
+Iter: 310 Error: 0.245908 Train Accuracy: 55283 - 92.1383% Test Accuracy: 94.9
+Iter: 320 Error: 0.246589 Train Accuracy: 55331 - 92.2183% Test Accuracy: 94.92
+Iter: 330 Error: 0.245665 Train Accuracy: 55327 - 92.2117% Test Accuracy: 94.93
+Iter: 340 Error: 0.244054 Train Accuracy: 55377 - 92.295% Test Accuracy: 94.95
+Iter: 349 Error: 0.244927 Train Accuracy: 55351 - 92.2517% Test Accuracy: 95.02
+Operation took 4659.3seconds
