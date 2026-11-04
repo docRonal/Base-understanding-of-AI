@@ -1,86 +1,67 @@
-# Fundamentals of Artificial Intelligence (Podstawy Sztucznej Inteligencji) 
+# Fundamentals of Artificial Intelligence
 
-This repository contains the solutions for Laboratory 1 and Laboratory 2 for the "Fundamentals of Artificial Intelligence" course. The main objective of these labs is to understand the core principles of artificial neural networks by implementing them "from scratch" using the NumPy library.
+This repository contains Python implementations of neural networks and training methods developed for four artificial intelligence laboratories. The examples use NumPy and progress from forward propagation to backpropagation, MNIST classification, and dropout regularization.
 
-## 🛠 Technologies
+## Requirements
 
-* **Programming Language:** Python 3
-* **Libraries:** NumPy (matrix operations, vectorization)
+- Python 3
+- NumPy
+- Torchvision for downloading the MNIST dataset in Lab3
 
----
-
-## 🔬 Laboratory 1: Neural Network Architecture (Forward Pass)
-
-The first laboratory focuses on understanding the basic components of neural networks and implementing the forward propagation algorithm.
-
-###  Implemented Architectures
-
-**1. The Single Neuron**
-Implementation of a basic neuron that calculates an output based on input data, weights, and an optional bias.
-
-```text
-   Input (x) ────── weight (W) ─────> [ Σ ] ──────> Prediction (y)
-                                        ▲
-                                        │
-                                      Bias (b)
-```
-
-**2. Single-Layer Network (Dense Layer)**
-Creation of a fully connected layer where multiple inputs are mapped to multiple outputs using matrix multiplication.
-
-**3. Deep Neural Network**
-Implementation of a multi-layer network (including a hidden layer), where the output of the first layer serves as the input for the next.
-
-**4. Modular API**
-Development of a flexible class to build networks with an arbitrary number of layers, inputs, and outputs, along with random weight initialization functions.
-
----
-
-## Laboratory 2: Gradient Descent & Network Training
-
-The second laboratory focuses on neural network training algorithms. We implemented the Gradient Descent method to minimize the Mean Squared Error (MSE).
-
-### Implemented Features
-
-**1. Single Neuron Training**
-Implementation of a training loop for a single neuron. This includes calculating the Mean Squared Error (MSE), computing the gradient (Delta), and updating the weight using a specified learning rate ($\alpha$).
-
-**2. Dense Layer Training**
-Adapting the gradient descent algorithm for matrix computations. The network is trained on multiple data batches (series) using the outer product to efficiently update the weight matrices.
-
-**3. RGB Color Classification**
-Practical application of the network for a classification task. The network takes 3 inputs (R, G, B color channels) and classifies them into 4 distinct colors (Red, Green, Blue, Yellow).
-
-*   **One-Hot Encoding:** Applied to the expected results to format them for classification (e.g., `[0, 0, 0, 1]` for Yellow).
-*   **Accuracy Testing:** The model is trained on a training dataset (`training_colors.txt`) and evaluated on a test dataset (`test_colors.txt`). The network achieves a **100% accuracy** rate by selecting the output neuron with the highest activation.
-
-### Visualization of the RGB Classifier (Task 3)
-
-```text
-  Input Layer (RGB)     Dense Layer (Weights Matrix 4x3)     Output Layer (Classes)
-  
-   [x1] (Red)   ───────────────── w_11, w_12... ─────────────────> [y1] (Red)
-                                     / \
-   [x2] (Green) ───────────────── w_21, w_22... ─────────────────> [y2] (Green)
-                                     \ /
-   [x3] (Blue)  ───────────────── w_31, w_32... ─────────────────> [y3] (Blue)
-   
-                                     └───────────────────────────> [y4] (Yellow)
-```
-
----
-
-##  How to Run
-
-Ensure you have Python and NumPy installed on your machine.
-Install dependencies if necessary:
+Install the packages with:
 
 ```bash
-pip install numpy
+python -m pip install numpy torchvision
 ```
 
-Run the scripts standardly via the terminal. For example, to run the color classifier:
+## Laboratory 1: Neural Network Architecture
+
+Lab1 introduces the building blocks of a feed-forward neural network: a single neuron, a dense layer, multi-layer networks, and a modular network API. The implementations focus on calculating predictions with the forward pass.
+
+Scripts: `Lab1/neuron_1.py` through `Lab1/neuron_4.py`.
+
+## Laboratory 2: Gradient Descent and Training
+
+Lab2 adds training with gradient descent and mean squared error. The exercises cover updating a single neuron and dense-layer weights, then apply the network to four-class RGB color classification. The classifier uses one-hot targets and reports accuracy on separate training and test datasets.
+
+Run the color-classification task from its directory so the data files are found:
 
 ```bash
-python lab2_task3.py
+cd Lab2
+python zad3.py
 ```
+
+The datasets are `Lab2/training_colors.txt` and `Lab2/test_colors.txt`.
+
+## Laboratory 3: Backpropagation
+
+Lab3 implements backpropagation for multi-layer networks, first with a small example and then in training tasks. It includes MNIST digit classification and an RGB color classifier.
+
+- `zad1.py` demonstrates predictions through a two-layer network.
+- `zad2.py` calculates gradients and updates weights for a hidden-layer network.
+- `zad3.py` trains a network on MNIST and saves weights to `mnist_weights.json`.
+- `zad4.py` trains and evaluates a four-class RGB color classifier.
+
+Run a script from the Lab3 directory, for example:
+
+```bash
+cd Lab3
+python zad2.py
+```
+
+`mnist_downloader.py` downloads MNIST using Torchvision. Note that it writes data under `Lab3/data/MNIST/raw`, while `zad3.py` currently expects files under `Lab3/mnist/data/MNIST/raw`. Place the downloaded files at the path expected by the script before running `zad3.py`.
+
+## Laboratory 4: Dropout and Mini-Batch Training
+
+Lab4 explores dropout regularization and training on MNIST. The tasks compare single-example and mini-batch updates, and experiment with ReLU, tanh, and softmax activations. Training logs are stored in `Lab4/Lab4_1` and `Lab4/Lab4_2`; the MNIST data files are under `Lab4/mnist/data/MNIST/raw`.
+
+Run the experiments from the Lab4 directory:
+
+```bash
+cd Lab4
+python zad1.py
+python zad2.py
+python zad3.py
+```
+
+The scripts save trained weights as `mnist_weights.json` in the current directory.
